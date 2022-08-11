@@ -1,0 +1,45 @@
+.root {
+    position: relative;
+    background: rgba(0,0,0,.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0;
+
+    .row {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .col {
+        position: relative;
+
+        h1{ 
+            color: rgb(26,40,96);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        p {
+            color: grey;
+            letter-spacing: 1px;
+        }
+
+        .imageRow {
+            position: relative;
+        }
+
+        .imageCol {
+            position: relative;
+            
+            img {
+                max-width: 80px;
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.root {
+    position: relative;
+    width: 80%;
+    margin: 20px auto 200px auto;
+
+    .row {
+        position: relative;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .col {
+        border: 2px solid rgba(0,0,0,.1);
+        border-radius: 15px;
+        margin: 10px 0;
+        padding: 30px;
+
+        .productRow {
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+
+        h3 { 
+            color: rgb(26,40,96);
+            margin-bottom: 0;
+            margin-top: 20px;
+            font-weight: 700;
+            font-size: 22px;
+        }
+
+        button {
+            background: rgb(26,40,96);
+            color: white;
+            padding: 2px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        p {
+            color: grey;
+        }
+
+        img {
+            object-fit: cover;
+            width: 220px;
+            height: 220px;
+            border-radius: 10px;
+            margin-right: 10px;
+            border: 1px solid rgba(0,0,0,.3)
+        }
+    }
+}

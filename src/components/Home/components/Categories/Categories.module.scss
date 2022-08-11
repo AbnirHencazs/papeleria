@@ -1,0 +1,41 @@
+.root {
+    position: relative;
+    width: 75%;
+    margin: 150px auto;
+    
+    .row {
+        position: relative;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .col {
+        position: relative;
+        padding: 0 20px;
+
+        a{
+            text-decoration: none;
+            text-align: center;
+
+            &:hover {
+                p {
+                    color: rgb(26,40,96);
+                    transition: .7s;
+                }
+            }
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 220px;
+        }
+
+        p {
+            color: grey;
+            margin-top: 10px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+    }
+}

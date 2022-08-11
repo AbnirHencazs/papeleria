@@ -1,0 +1,11 @@
+{
+    "extends": ["stylelint-config-standard", "stylelint-config-standard-scss", 
+                "stylelint-config-prettier", "stylelint-config-prettier-scss"],
+    "rules": {
+      "selector-pseudo-class-no-unknown": [true, {
+        "ignorePseudoClasses": ["global", "local"]
+      }],
+      "scss/selector-no-redundant-nesting-selector": null,
+      "selector-max-id": 1
+    }
+}

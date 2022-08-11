@@ -1,0 +1,130 @@
+.root {
+    position: relative;
+    background: rgba(0,0,0,.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 120px;
+    
+    .row {
+        position: relative;
+    }
+
+    .imageRow {
+        position: relative;
+        justify-content: space-between;
+        margin: 100px 0 70px 0;
+        flex-wrap: wrap;
+    }
+
+    .imageCol {
+        position: relative;
+    }
+
+    .leftCol {
+        h1 {
+            color: rgb(26,40,96);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: grey;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: grey;
+            font-size: 14px;
+            text-decoration: underline;
+            letter-spacing: 1px;
+        }
+
+        img {
+            width: 100%;
+            height: 350px;
+            object-fit: contain;
+        }
+    }
+
+    .rightCol {
+        position: relative;
+
+        p {
+            color: grey;
+            font-size: 14px;
+            text-decoration: underline;
+            margin-top: 15px;
+            text-align: right;
+            letter-spacing: 1px;
+        }
+        
+        .rightColContainer {
+            position: relative;
+            border-radius: 30px;
+            width: 70%;
+            background: rgb(26,40,96);
+            box-shadow: -10px 7px 7px 1px rgba(186,186,186,0.81);
+            -webkit-box-shadow: -10px 7px 7px 1px rgba(186,186,186,0.81);
+            -moz-box-shadow: -10px 7px 7px 1px rgba(186,186,186,0.81);
+            padding: 70px 70px 130px 70px;
+            margin-left: auto;
+
+            h3 {
+                color: rgb(239,236,69);
+                margin-bottom: 10px;
+                font-weight: 700;
+            }
+
+
+            span {
+                color: white;
+                font-size: 14px;
+            }
+
+            .images {
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            img {
+                object-fit: cover;
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+                border-radius: 50%;
+
+               + img {
+                    margin-left: 15px;                   
+                } 
+            }
+
+            a {
+                position: absolute;
+                display: block;
+                background: white;
+                color: rgb(26,40,96);
+                font-size: 22px;
+                text-decoration: none;
+                width: 260px;
+                height: 90px;
+                border: 1px solid rbga(0,0,0,.3);
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                padding: 0 20px;
+                left: -20%;
+                bottom: 30px;
+                font-weight: 700;
+                span {
+                    display: block;
+                    color: grey;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

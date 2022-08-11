@@ -1,0 +1,41 @@
+.root {
+    position: relative;
+    width: 90%;
+    margin: 15px auto;
+
+    .nav {
+        align-items: center;
+        border: none;
+    } 
+
+    .links {
+        padding: 0 20px;
+        a {
+            color: grey;
+            text-decoration: none;
+            font-weight: 700;
+            margin: 10px 20px;
+
+            &:hover {
+                transition: .8s;
+                color: rgb(26,40,96);
+            }
+        }
+
+        select {
+            border: none;
+            border-radius: 5px;
+            padding: 3px 12px;
+            color: white;
+            background: rgb(26,40,96);
+        }
+    }
+
+    .grid {
+        cursor: pointer;
+    }
+
+    .list {
+        cursor: pointer;
+    }
+}

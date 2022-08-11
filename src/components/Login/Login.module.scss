@@ -1,0 +1,104 @@
+.root {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: white;
+    height: 100vh;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .background {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        img {
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+    }
+
+    .loginFormContainer {
+        position: relative;
+        width: 20%;
+        margin: 0 auto;
+        margin-top: 3rem;
+        z-index: 1;
+
+
+        img,input,a {
+            display: block;
+        }
+
+        .logo {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            transform: translateX(-50%);
+            left: 50%;
+        }
+
+        form {
+            position: relative;
+            width: 100%;
+            margin: 5rem auto;
+
+            .submit {
+                position: relative;
+                background: rgb(239,236,69);
+                border-radius: 5px;
+                border: none;
+                color: rgb(26,40,96);
+                padding: 2px 15px;
+                transform: translateX(-50%);
+                left: 50%;
+                display: inline-block;
+            } 
+
+            .profile {
+                position: relative;
+                width: 270px;
+                height: 270px;
+                border-radius: 50%;
+                margin-bottom: 40px;
+                transform: translateX(-50%);
+                left: 50%;
+            }
+
+            input {
+                width: 100%;
+                border: none;
+                border-radius: 15px;
+                padding: 12px 5px;
+                margin-top: 15px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .formFooter {
+                justify-content: space-between;
+                margin: 20px 0;
+                input {
+                    width: auto;
+                    margin: 0 7px 0 0;
+                }
+            }     
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 35px;
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+    }
+}
