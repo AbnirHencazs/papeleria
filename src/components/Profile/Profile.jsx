@@ -1,18 +1,42 @@
-import { Routes, Route } from 'react-router-dom';
-import { Cart, Dashboard, OrderSuccess, Summary, Tabs } from './components';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import {
+  Cart,
+  EditProfile,
+  Navbar,
+  Form,
+  OrderSuccess,
+  Summary,
+  Tabs,
+  LeftSidebar,
+  RightSidebar
+} from './components';
 import styles from './Profile.module.scss';
 
 const Profile = () => {
+  const currentLocation = useLocation().pathname;
+  const isFormRendered =
+    currentLocation === '/profile/tabs' || currentLocation === '/profile/orderSuccess';
+  const isRightSidebarRendered = currentLocation !== '/profile/editProfile';
+
+  const profileContentClass = isRightSidebarRendered
+    ? styles.profileContent
+    : styles.profileContentEditProfile;
+
   return (
     <div className={styles.root}>
-      <Routes>
-        <Route path="/" element={<Dashboard />}>
+      <LeftSidebar />
+      <div className={profileContentClass}>
+        <Navbar />
+        {isFormRendered && <Form />}
+        <Routes>
           <Route path="tabs" element={<Tabs />} />
+          <Route path="editProfile" element={<EditProfile />} />
           <Route path="cart" element={<Cart />} />
           <Route path="orderSuccess" element={<OrderSuccess />} />
           <Route path="summary" element={<Summary />} />
-        </Route>
-      </Routes>
+        </Routes>
+      </div>
+      {isRightSidebarRendered && <RightSidebar />}
     </div>
   );
 };

@@ -6,6 +6,3 @@ export * from './Login';
 
 export { default as Profile } from './Profile';
 export * from './Profile';
-
-export { default as Register } from './Register';
-export * from './Register';

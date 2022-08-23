@@ -1,3 +1,72 @@
 .root {
     position: relative;
+
+    .row {
+        height: 70vh;
+    }
+
+    .indicators {
+        position: absolute;
+        bottom: -60px;
+
+        button {
+            width: 15px;
+            height: 15px;
+            background: rgb(26,40,96);
+            border-radius: 50%;
+            border-top: 0;
+            border-bottom: 0;
+            padding: 0;
+        }
+    }
+
+    .leftCol {
+        padding: 0;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .rightCol {
+        background: rgb(26,40,96);
+        padding: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        .rightColContainer {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: rgb(239,236,69);
+            font-weight: 700;
+        }
+
+        p, h2 {
+            color: white;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        h2 {
+            margin-bottom: 70px;
+            font-weight: 700;
+        }
+
+        button {
+            background: rgb(239,236,69);
+            border: none;
+            border-radius: 5px;
+            color: rgb(26,40,96);
+            padding: 3px 10px;
+        }
+    }
 }

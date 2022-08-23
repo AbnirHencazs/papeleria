@@ -13,7 +13,7 @@ const RightSidebar = () => {
           <img src={profileGrey} alt="" />
           <p>
             Arturo S.
-            <a href="">Editar</a>
+            <a href="editProfile">Editar</a>
           </p>
         </div>
 
@@ -38,7 +38,7 @@ const RightSidebar = () => {
       </div>
 
       <div className={styles.cart}>
-        <a href="">
+        <a href="cart">
           <img src={cartBlue} />
           Finalizar compra
         </a>
