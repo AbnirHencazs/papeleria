@@ -1,0 +1,129 @@
+.root {
+    width: 90%;
+    margin: 30px auto;
+
+    .row {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .leftCol {
+
+        .profile {
+            object-fit: cover;
+            width: 100%;
+            border-radius: 50%;
+            border: 1px solid grey;
+        }
+
+        .upload {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin-top: 10px;
+
+            p {
+                color: rgb(26,40,96);
+                margin: 0;
+                font-weight: 700;
+            }
+
+            img {
+                width: 30px;
+                height: 30px;
+                margin-right: 5px;
+            } 
+        }
+    }
+
+    .rightCol {
+        padding-left: 80px;
+
+        h3 {
+            color: rgb(26,40,96);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+
+        .formContainer {
+
+            input, select {
+                width: 100%;
+                margin: 10px;
+                background: rgba(0,0,0,.1);
+                border-radius: 10px;
+                border: none;
+                padding: 5px 7px;
+                color: grey;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .formRow {
+                justify-content: space-between;
+                align-items: center;
+                
+                .dFlex { 
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 10px;
+        
+                    input, select {
+                        margin: 0;
+                        + input {
+                            margin-left: 10px;
+                        }
+
+                        + select {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+    
+                .formLeftCol {
+    
+                }
+    
+                .formRightCol {
+                    
+                }
+            }
+
+            .paymentInfo {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                padding: 20px 0;
+                margin: 20px 0;
+                border-top: 2px solid rgba(0,0,0,.1);
+                border-bottom: 2px solid rgba(0,0,0,.1);
+
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 60%;
+                    margin: 0 auto;
+                    padding-left: 60px;
+                }
+            }
+
+            button {
+                position: absolute;
+                bottom: -170px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: white;
+                background: rgb(26,40,96);
+                border-radius: 7px;
+                border: none;
+                padding: 3px 5px;
+            }
+        }
+    }
+}

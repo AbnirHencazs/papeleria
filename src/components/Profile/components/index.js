@@ -1,8 +1,8 @@
 export { default as Cart } from './Cart';
 export * from './Cart';
 
-export { default as Dashboard } from './Dashboard';
-export * from './Dashboard';
+export { default as EditProfile } from './EditProfile';
+export * from './EditProfile';
 
 export { default as Form } from './Form';
 export * from './Form';

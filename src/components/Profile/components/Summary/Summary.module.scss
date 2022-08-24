@@ -1,3 +1,93 @@
-.root{
+.root {
     position: relative;
+    width: 90%;
+    margin: 45px auto;
+
+    .summaryDetails {
+        position: relative;
+        width: 70%;
+
+        h2 {
+            text-transform: uppercase;
+            color: rgb(26,40,96);
+            font-size: 700;
+        }
+    
+        p {
+            color: grey;
+        }
+
+        .userDetails {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            width: 60%;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            div {
+
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .table {
+        margin: 80px 0;
+
+        thead {
+            border-radius: 10px;
+
+            tr {
+                color: rgb(26,40,96);
+                border: 2px solid rgba(0,0,0,.1);
+            }
+
+            th {
+
+            }
+        }
+
+        tbody {
+            color: grey;
+
+            tr {
+
+            }
+
+            th {
+
+            }
+
+            td {
+                max-width: 100px;
+            }
+        }
+    }
+
+    .footer {
+        h4 {
+            color: grey;
+            text-transform: uppercase;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        p {
+            color: grey;
+            font-size: 12px;
+            margin-bottom: 30px;
+        }
+
+        img {
+            position: relative;
+            width: 100%;
+            object-fit: cover;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }   
 }

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
-import classnames from 'classnames';
 import { ProductGrid, ProductList } from '../../components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTableCells, faTableList } from '@fortawesome/free-solid-svg-icons';
+import classnames from 'classnames';
 import styles from './Tabs.module.scss';
 
 const Tabs = () => {
@@ -23,8 +23,8 @@ const Tabs = () => {
           <a href="">Comprar de Nuevo</a>
           <a href="">Pendiente de envío</a>
           <a href="">Pedidos cancelados</a>
-          <select name="" id="">
-            <option selected value="">
+          <select defaultValue="option1" name="" id="">
+            <option name="option1" value="option1">
               Ultimos 30 días
             </option>
           </select>

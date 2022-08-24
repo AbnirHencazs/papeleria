@@ -32,17 +32,17 @@ const LeftSidebar = () => {
         <div className={styles.logo}>
           <img src={logo} alt="logo" />
         </div>
-        <a href="">
+        <a href="tabs">
           <img src={starGrey} alt="star" />
           FAVORITOS
         </a>
-        <a href="">
+        <a href="summary">
           <img src={percentGrey} alt="percent" />
           COTIZAR
         </a>
         <p>PRODUCTOS</p>
         {list.map((item, index) => (
-          <a key={index} href="">
+          <a key={index} href="tabs">
             <img src={item.icon} alt={index} />
             {item.label}
           </a>
