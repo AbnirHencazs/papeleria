@@ -1,7 +1,7 @@
 .root {
     position: relative;
     width: 100%;
-    margin: 100px auto 200px auto;
+    margin: 100px auto 100px auto;
 
     .row {
         position: relative;
@@ -11,6 +11,7 @@
 
     .col {
         text-align: center;
+        margin-bottom: 50px;
 
         h3 { 
             color: rgb(26,40,96);
