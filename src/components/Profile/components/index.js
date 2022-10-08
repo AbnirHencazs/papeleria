@@ -4,9 +4,6 @@ export * from './Cart';
 export { default as EditProfile } from './EditProfile';
 export * from './EditProfile';
 
-export { default as Form } from './Form';
-export * from './Form';
-
 export { default as LeftSidebar } from './LeftSidebar';
 export * from './LeftSidebar';
 

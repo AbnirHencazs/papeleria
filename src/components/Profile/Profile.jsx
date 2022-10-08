@@ -3,7 +3,6 @@ import {
   Cart,
   EditProfile,
   Navbar,
-  Form,
   OrderSuccess,
   Summary,
   Tabs,
@@ -14,8 +13,6 @@ import styles from './Profile.module.scss';
 
 const Profile = () => {
   const currentLocation = useLocation().pathname;
-  const isFormRendered =
-    currentLocation === '/profile/tabs' || currentLocation === '/profile/orderSuccess';
   const isRightSidebarRendered = currentLocation !== '/profile/editProfile';
 
   const profileContentClass = isRightSidebarRendered
@@ -27,7 +24,6 @@ const Profile = () => {
       <LeftSidebar />
       <div className={profileContentClass}>
         <Navbar />
-        {isFormRendered && <Form />}
         <Routes>
           <Route path="tabs" element={<Tabs />} />
           <Route path="editProfile" element={<EditProfile />} />
