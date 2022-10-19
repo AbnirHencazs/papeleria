@@ -1,4 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { actions } from '../../../../providers/reducer';
+import { AppContext } from '../../../../App';
+import { getProducts } from '../../../../hooks/api';
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 import { ProductGrid, ProductList } from '../../components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,7 +10,18 @@ import classnames from 'classnames';
 import styles from './Tabs.module.scss';
 
 const Tabs = () => {
+  const { setAppContext } = useContext(AppContext);
   const [activeTab, setActiveTab] = useState('1');
+
+  const setProducts = () => {
+    return getProducts().then((response) => {
+      setAppContext({ type: actions.SET_PRODUCTS, payload: response.data });
+    });
+  };
+
+  useEffect(() => {
+    setProducts();
+  }, []);
 
   const toggle = (tab) => {
     if (activeTab !== tab) {
