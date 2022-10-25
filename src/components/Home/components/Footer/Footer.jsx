@@ -39,7 +39,7 @@ const Footer = () => {
         <Col className={styles.rightCol}>
           <div className={styles.rightColContainer}>
             <div>
-              <h3>Sucursal cln:</h3>
+              <h3>Sucursal CLN:</h3>
               <span>
                 <b>Dirección:</b> Rafael Buelna #546 Ote. Col. Centro, Culiacán, Sinaloa <br />
                 <b>Teléfonos:</b> (667)7130100 y (667)7132560 <br />
@@ -50,7 +50,7 @@ const Footer = () => {
             <br />
             <br />
             <div>
-              <h3>Sucursal mzt:</h3>
+              <h3>Sucursal MZT:</h3>
               <span>
                 <b>Dirección:</b> Cruz Lizárraga #705 Col. Palos Prietos, Mazatlán, Sinaloa <br />
                 <b>Teléfonos:</b> (669)9824350 y (669)9824267 <br />

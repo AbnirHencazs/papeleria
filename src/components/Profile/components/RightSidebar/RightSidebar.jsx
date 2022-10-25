@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import { AppContext } from '../../../../App';
 import profileGrey from '../../../../assets/icons/profileGrey.svg';
 import check from '../../../../assets/icons/check.svg';
 import trash from '../../../../assets/icons/trash.svg';
@@ -6,13 +8,14 @@ import cartBlue from '../../../../assets/icons/cartBlue.svg';
 import styles from './RightSidebar.module.scss';
 
 const RightSidebar = () => {
+  const { appContext } = useContext(AppContext);
   return (
     <div className={styles.root}>
       <div className={styles.userInfo}>
         <div className={styles.profile}>
           <img src={profileGrey} alt="" />
           <p>
-            Arturo S.
+            {appContext.user.Nombre_Comercial}
             <a href="editProfile">Editar</a>
           </p>
         </div>

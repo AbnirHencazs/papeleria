@@ -1,8 +1,11 @@
+import { useContext } from 'react';
+import { AppContext } from '../../../../App';
 import bell from '../../../../assets/icons/bell.svg';
 import search from '../../../../assets/icons/search.svg';
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
+  const { appContext } = useContext(AppContext);
   const currentDate = new Date();
 
   const padTo2Digits = (num) => {
@@ -20,7 +23,7 @@ const Navbar = () => {
   return (
     <div className={styles.root}>
       <h2>
-        Hola Arturo S. <span>{formatDate(currentDate)}</span>
+        Hola {appContext.user.Nombre_Comercial} <span>{formatDate(currentDate)}</span>
       </h2>
       <div className={styles.search}>
         <img src={bell} alt="bell" />
