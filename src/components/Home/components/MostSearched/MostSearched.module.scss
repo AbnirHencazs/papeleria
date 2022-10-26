@@ -67,4 +67,16 @@
             border: 1px solid rgba(0,0,0,.3)
         }
     }
+
+    @media only screen and (max-width: 720px) {
+        margin: 50px auto 100px auto;
+
+        .title {
+            margin-bottom: 40px;
+        }
+
+        .col {
+            margin: 15px 0;
+        }
+    }
 }

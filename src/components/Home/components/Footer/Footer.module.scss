@@ -127,4 +127,36 @@
             }
         }
     }
+
+    @media only screen and (max-width: 720px) {
+        padding: 80px 20px;
+
+        .row {
+            flex-wrap: wrap;
+        }
+
+        .leftCol {
+            width: 100%;
+        }
+
+        .rightCol {
+            width: 100%;
+
+            .rightColContainer {
+                width: 100%;
+                padding: 40px 40px 150px 40px;
+
+                .images {
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                }
+
+                a {
+                    left: 10%;
+                    bottom: 60px;
+                }
+            }
+        }
+    }
 }

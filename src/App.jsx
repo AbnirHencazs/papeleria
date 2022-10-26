@@ -1,15 +1,19 @@
 import { useReducer, createContext } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { setAuthToken } from './hooks/api';
 import { Home, Login, Profile } from './components';
-import { userData } from './config/mockData';
 export const AppContext = createContext({});
 import { reducer } from './providers/reducer';
 
 const App = () => {
   const [appContext, setAppContext] = useReducer(reducer, {
     products: [],
-    user: userData
+    user: {}
   });
+  const token = localStorage.getItem('token');
+  if (token) {
+    setAuthToken(token);
+  }
   return (
     <AppContext.Provider value={{ appContext, setAppContext }}>
       <BrowserRouter>

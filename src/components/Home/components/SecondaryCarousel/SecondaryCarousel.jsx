@@ -52,10 +52,10 @@ const SecondaryCarousel = () => {
         onExited={() => setAnimating(false)}
         key={item.src}>
         <Row className={styles.row}>
-          <Col lg={4} className={styles.leftCol}>
+          <Col lg={4} sm={12} className={styles.leftCol}>
             <img src={item.src} alt={item.altText} />
           </Col>
-          <Col lg={8} className={styles.rightCol}>
+          <Col lg={8} sm={12} className={styles.rightCol}>
             <div className={styles.rightColContainer}>
               <h1>{item.title}</h1>
               <p>{item.description}</p>

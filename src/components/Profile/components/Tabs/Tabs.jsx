@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import { actions } from '../../../../providers/reducer';
 import { AppContext } from '../../../../App';
-import { getProducts } from '../../../../hooks/api';
+import { getProducts, getUser } from '../../../../hooks/api';
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 import { ProductGrid, ProductList } from '../../components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,6 +11,8 @@ import styles from './Tabs.module.scss';
 
 const Tabs = () => {
   const { setAppContext } = useContext(AppContext);
+  const token = localStorage.getItem('token');
+
   const [activeTab, setActiveTab] = useState('1');
 
   const setProducts = () => {
@@ -19,8 +21,20 @@ const Tabs = () => {
     });
   };
 
+  const getUserInfo = (token) => {
+    getUser({ Cli_clave: token }).then((response) => {
+      setAppContext({
+        type: actions.SET_USER,
+        payload: response
+      });
+    });
+  };
+
   useEffect(() => {
     setProducts();
+    if (token) {
+      getUserInfo(token);
+    }
   }, []);
 
   const toggle = (tab) => {

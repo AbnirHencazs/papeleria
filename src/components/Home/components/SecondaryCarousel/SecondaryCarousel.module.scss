@@ -69,4 +69,34 @@
             padding: 3px 10px;
         }
     }
+
+    @media only screen and (max-width: 720px) {
+        .row {
+            flex-wrap: wrap;
+        }
+
+        .leftCol {
+            height: 50%;
+        }
+
+        .rightCol {
+            height: 50%;
+
+            h1 {
+                font-size: 18px;
+            }
+    
+            p, h2 {
+                font-size: 12px;
+            }
+    
+            p {
+                margin: 10px 0;
+            }
+    
+            h2 {
+                margin-bottom: 30px;
+            }
+        }
+    }
 }

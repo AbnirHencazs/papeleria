@@ -15,7 +15,7 @@ const ProductGrid = () => {
             <img src={placeholder} alt="" />
             <h3>{product.Nombre}</h3>
             <p>{product.Descripcion}</p>
-            <h3>{`$${product.PrecioLista}`}</h3>
+            <h3>{`$${product.Precio}`}</h3>
             <button>Añadir al carrito</button>
           </Col>
         ))}

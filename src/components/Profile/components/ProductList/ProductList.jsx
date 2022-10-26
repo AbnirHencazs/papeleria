@@ -23,7 +23,7 @@ const ProductList = () => {
                 </div>
               </Col>
               <Col xs={3}>
-                <h3>{`$${product.PrecioLista}`}</h3>
+                <h3>{`$${product.Precio}`}</h3>
                 <button>Añadir al carrito</button>
               </Col>
             </Row>
