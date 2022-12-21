@@ -60,6 +60,8 @@
     .item_container{
       padding: 10px 20px;
       position: relative;
+      font-size: 1rem;
+      font-weight: 500;
       &:hover{
         border-left: solid 2px rgb(26, 40, 96);
       }
@@ -67,8 +69,9 @@
   }
   &__sec_menu {
     position: absolute;
-    top: 0;
+    margin-top: -45px;
     left: 100%;
+    width: auto;
     background-color: white;
   }
 }
