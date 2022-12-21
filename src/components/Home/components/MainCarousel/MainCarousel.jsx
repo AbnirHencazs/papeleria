@@ -3,8 +3,9 @@ import { Carousel, CarouselItem } from 'reactstrap';
 import carousel from '../../../../assets/images/carousel.png';
 import carousel2 from '../../../../assets/images/carousel2.png';
 import whatsapp from '../../../../assets/icons/whatsapp.svg';
-import arrow from '../../../../assets/icons/arrow.svg';
+// import arrow from '../../../../assets/icons/arrow.svg';
 import styles from './MainCarousel.module.scss';
+import Dropdown from '../Dropdown/Dropdown';
 
 const MainCarousel = () => {
   const items = [
@@ -18,10 +19,90 @@ const MainCarousel = () => {
     }
   ];
 
+  const categoryList = [
+    {
+      code: 1,
+      name: 'Muebles',
+      productList: [
+        { name: 'Ejecutivos', code: 1 },
+        { name: 'Operativos', code: 2 },
+        { name: 'Credenzas', code: 57 },
+        { name: 'Mámparas', code: 3 },
+        { name: 'Mesas de juntas', code: 4 },
+        { name: 'Recepción', code: 4 },
+        { name: 'Comedores', code: 7 },
+        { name: 'Archiveros', code: 8 },
+        { name: 'Home office', code: 9 },
+        { name: 'Lockers', code: 50 },
+        { name: 'Estantes y soportes', code: 52 },
+        { name: 'Gabinetes y libreros', code: 55 },
+        { name: 'Cajoneras', code: 56 },
+        { name: 'Accesorios', code: 53 },
+        { name: 'Piezas por separado' }
+      ]
+    },
+    {
+      code: 2,
+      name: 'Sillas',
+      productList: [
+        { name: 'Pentakill', code: 1 },
+        { name: 'Diego', code: 2 },
+        { name: 'Es', code: 57 },
+        { name: 'mi', code: 3 },
+        { name: 'Mesa de juntas', code: 4 },
+        { name: 'Recepción', code: 4 },
+        { name: 'Comedores', code: 7 },
+        { name: 'Archiveros', code: 8 },
+        { name: 'Home office', code: 9 },
+        { name: 'Lockers', code: 50 },
+        { name: 'Estantes y soportes', code: 52 },
+        { name: 'Gabinetes y libreros', code: 55 },
+        { name: 'Cajoneras', code: 56 },
+        { name: 'Accesorios', code: 53 },
+        { name: 'Piezas por separado' }
+      ]
+    },
+    {
+      code: 3,
+      name: 'Escolar',
+      productList: []
+    },
+    {
+      code: 4,
+      name: 'Oficina',
+      productList: []
+    },
+    {
+      code: 5,
+      name: 'Papel',
+      productList: []
+    },
+    {
+      code: 6,
+      name: 'Consumibles',
+      productList: []
+    },
+    {
+      code: 7,
+      name: 'Limpieza',
+      productList: []
+    },
+    {
+      code: 8,
+      name: 'Restaurante',
+      productList: []
+    },
+    {
+      code: 9,
+      name: 'Paquetes',
+      productList: []
+    }
+  ];
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
-  const ArrowIcon = () => <img src={arrow} alt="arrow" />;
+  // const ArrowIcon = () => <img src={arrow} alt="arrow" />
 
   const next = () => {
     if (animating) return;
@@ -60,24 +141,11 @@ const MainCarousel = () => {
       </Carousel>
 
       <div className={styles.links}>
-        <a href="/login">
-          <div>
-            Regístrate <span>Regístrate y cotiza</span>
-          </div>
-          <ArrowIcon />
-        </a>
-        <a href="">
-          <div>
-            Categorías <span>Filtra tus productos</span>
-          </div>
-          <ArrowIcon />
-        </a>
-        <a href="/profile/tabs">
-          <div>
-            Productos <span>Conoce nuestros productos</span>
-          </div>
-          <ArrowIcon />
-        </a>
+        <Dropdown title="Regístrate" subtitle="Regístrate y cotiza" />
+
+        <Dropdown title="Categorías" subtitle="Filtra tus productos" list={categoryList} />
+
+        <Dropdown title="Productos" subtitle="Conoce nuestros productos" />
       </div>
 
       <div className={styles.footer}>
