@@ -29,8 +29,9 @@ const MainCarousel = () => {
         { name: 'Credenzas', code: 57 },
         { name: 'Mámparas', code: 3 },
         { name: 'Mesas de juntas', code: 4 },
-        { name: 'Recepción', code: 4 },
-        { name: 'Comedores', code: 7 },
+        { name: 'Recepción', code: 5 },
+        { name: 'Comedores', code: 6 },
+        { name: 'Sofás', code: 7 },
         { name: 'Archiveros', code: 8 },
         { name: 'Home office', code: 9 },
         { name: 'Lockers', code: 50 },
@@ -38,7 +39,7 @@ const MainCarousel = () => {
         { name: 'Gabinetes y libreros', code: 55 },
         { name: 'Cajoneras', code: 56 },
         { name: 'Accesorios', code: 53 },
-        { name: 'Piezas por separado' }
+        { name: 'Piezas por separadooo', code: 54 }
       ]
     },
     {
@@ -50,8 +51,9 @@ const MainCarousel = () => {
         { name: 'Es', code: 57 },
         { name: 'mi', code: 3 },
         { name: 'Mesa de juntas', code: 4 },
-        { name: 'Recepción', code: 4 },
-        { name: 'Comedores', code: 7 },
+        { name: 'Recepción', code: 5 },
+        { name: 'Comedores', code: 6 },
+        { name: 'Sofás', code: 7 },
         { name: 'Archiveros', code: 8 },
         { name: 'Home office', code: 9 },
         { name: 'Lockers', code: 50 },
@@ -59,7 +61,7 @@ const MainCarousel = () => {
         { name: 'Gabinetes y libreros', code: 55 },
         { name: 'Cajoneras', code: 56 },
         { name: 'Accesorios', code: 53 },
-        { name: 'Piezas por separado' }
+        { name: 'Piezas por separado', code: 54 }
       ]
     },
     {

@@ -4,11 +4,11 @@ import arrow from '../../../../assets/icons/arrow.svg';
 import styles from './Dropdown.module.scss';
 const Dropdown = ({ title, subtitle, list }) => {
   const [dropdown, setDropdown] = useState(false);
-  const [secDropdown, setSecDropdown] = useState({ name: '', show: false });
+  const [secDropdown, setSecDropdown] = useState({ name: '' });
   const ArrowIcon = () => <img src={arrow} alt="arrow" />;
   const showProducts = (event, item) => {
     event.stopPropagation();
-    setSecDropdown({ name: item.name, show: !secDropdown.show });
+    setSecDropdown({ name: item.name });
   };
   return (
     <div className={styles.dropdown__container} onClick={() => setDropdown(!dropdown)}>
@@ -26,7 +26,7 @@ const Dropdown = ({ title, subtitle, list }) => {
                 onClick={(event) => showProducts(event, item)}>
                 {item.name}
               </div>
-              {secDropdown.show && (
+              {secDropdown.name && (
                 <div className={styles.dropdown__sec_menu}>
                   {item?.productList.map((product) =>
                     item.name === secDropdown.name ? (
