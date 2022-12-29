@@ -1,50 +1,62 @@
 .root {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 20%;
-    border-right: 2px solid rgba(0,0,0,.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 20%;
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
 
-    .container {
-        position: relative;
-        width: 70%;
-        margin: 0 auto;
+  .container {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
 
-        .logo {
-            margin: 25px 0 40px 0;
-            img {
-                max-width: 100px;
-            }
-        }
-
-        p {
-            margin: 48px 0 60px 0;
-            color: rgba(0,0,0,.3);
-            font-size: 20px;
-            text-transform: uppercase;
-        }
-
-        a {
-            display: block;
-            color: rgba(0,0,0,.3); 
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 20px;
-            margin-bottom: 12px;
-
-
-            &:hover {
-                color: rgb(26,40,96);
-                transition: .8s;
-            }
-
-            img {
-                width: 25px;
-                height: 25px;
-                margin-right: 15px;
-            }
-        }
+    .logo {
+      margin: 25px 0 40px 0;
+      img {
+        max-width: 100px;
+      }
     }
+
+    p {
+      margin: 48px 0 60px 0;
+      color: rgba(0, 0, 0, 0.3);
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+    div,
+    a {
+      color: rgba(0, 0, 0, 0.3);
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 12px;
+      &:hover {
+        color: rgb(26, 40, 96);
+        transition: 0.8s;
+      }
+      img {
+        width: 25px;
+        height: 25px;
+        margin-right: 15px;
+      }
+      
+    }
+    
+    a {
+      display: block;
+      text-decoration: none;
+    }
+  }
+}
+.first_list{
+    overflow-y: scroll;
+    height: 300px;
+}
+.sec_list {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    max-height: 100px;
 }
