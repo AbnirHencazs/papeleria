@@ -54,7 +54,7 @@
   &__menu {
     position: absolute;
     top: 100px;
-    left: 0;
+    left: -100%;
     width: 100%;
     background-color: white;
     .item_container{
@@ -69,7 +69,7 @@
   }
   &__sec_menu {
     position: absolute;
-    margin-top: -45px;
+    top: 0;
     left: 100%;
     width: auto;
     background-color: white;
